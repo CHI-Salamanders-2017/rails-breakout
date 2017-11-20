@@ -11,10 +11,10 @@
   <body>
     <div class="container">
       <nav>
-        <h1><a href="/">Songs!</a></h1>
+        <h1><%= link_to "Songs!", root_path %></h1>
         <ul>
-          <li><a href="/sessions/new">Login</a></li>
-          <li><a href="/users/new">Sign Up</a></li>
+          <li><%= link_to "Login", new_session_path %></li>
+          <li><%= link_to "Sign up", new_user_path, id: "sign_up", class: "thing" %></li>
         </ul>
       </nav>
       <div class="main">
