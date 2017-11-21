@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create]
-  resources :songs, except: [:destroy]
+  resources :songs
 
   # resources :categories, only: [:index] do
   #   resources :articles, except: [:destroy]

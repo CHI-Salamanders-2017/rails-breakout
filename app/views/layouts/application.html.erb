@@ -13,8 +13,13 @@
       <nav>
         <h1><%= link_to "Songs!", root_path %></h1>
         <ul>
+          <% if logged_in? %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "Logout", logout_path %></li>
+          <% else %>
           <li><%= link_to "Login", new_session_path %></li>
           <li><%= link_to "Sign up", new_user_path, id: "sign_up", class: "thing" %></li>
+          <% end %>
         </ul>
       </nav>
       <div class="main">

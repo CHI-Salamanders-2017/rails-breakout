@@ -1,5 +1,6 @@
 <h2>Sign up</h2>
 
+<%= render partial: "shared/errors", locals: {errors: @errors} if @errors %>
 <%= form_for(@user) do |f| %>
   <%= f.text_field :username, placeholder: "username" %>
   <%= f.password_field :password, placeholder: "password" %>

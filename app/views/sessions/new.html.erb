@@ -1,0 +1,8 @@
+<h2>Login</h2>
+
+<%= render partial: "shared/errors", locals: {errors: @errors} if @errors %>
+<%= form_with url: sessions_path, local: true do |f| %>
+  <%= f.text_field :username, placeholder: "username" %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <%= submit_tag  %>
+<% end %>
